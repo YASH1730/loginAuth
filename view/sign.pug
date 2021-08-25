@@ -4,6 +4,10 @@ block style
     style 
         include ../public/css/sign.css
 block content
+7
+        .signup
+8
+            h1(class = "animate__animated animate__rubberBand") Sign Up
         .signup
             h1(class = "animate__animated animate__rubberBand") Sign Up
             if typeof err != "undefined"
@@ -25,7 +29,7 @@ block content
                     
                     input(type="password", class = "item" name="repassword" placeholder = "Re-Password")
                 
-                    a(href="http://localhost/log")
+                    a(href="/log")
                         p Registered User/Log-in 
 
                     button(type="submit" id = "submit") Sign In
