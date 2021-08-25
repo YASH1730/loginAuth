@@ -1,0 +1,34 @@
+extends header.pug 
+
+block style 
+    style 
+        include ../public/css/sign.css
+block content
+        .signup
+            h1(class = "animate__animated animate__rubberBand") Sign Up
+            if typeof err != "undefined"
+                p(id = "err") #{err}
+            form(action="/signPost", method="post" id = "sign_form") 
+            
+                    input(type="text", class = "item" name="username" placeholder = "Username")
+                
+                    input(type="email", class = "item" name="email" placeholder = "Email")
+
+                    textarea(class = "item"  name="address", cols="20", rows="3" placeholder = "Address")
+                
+                    input(class = 'item', id = "show", type="password" pattern = ".{8,}" title = "Minimum eight characters, at least.",placeholder = 'Password', name="password")
+
+                    
+                    div( id = "pass")
+                        input(type="checkbox"  onclick="myFunction()" placeholder = "show")
+                        small &nbsp; Show Password
+                    
+                    input(type="password", class = "item" name="repassword" placeholder = "Re-Password")
+                
+                    a(href="http://localhost/log")
+                        p Registered User/Log-in 
+
+                    button(type="submit" id = "submit") Sign In
+block script
+    script 
+        include ../public/js/sign.js 

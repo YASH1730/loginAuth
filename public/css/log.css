@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.login{
+    display: flex;
+    margin: 100px auto;
+    flex-direction: column;
+    width: 50%;
+    /* border: 2px solid black; */
+    /* vertical-align: middle; */
+    justify-content: center;
+    align-items: center;
+}
+
+#login_form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 5%;
+    box-shadow: 0px 0px 5px 5px rgb(240, 233, 233);
+    border-radius: 10px;
+    transition: box-shadow 1s ease;
+}
+
+#login_form:hover{
+    box-shadow: 0px 0px 10px 2px rgb(247, 155, 155);
+}
+
+.item{
+    padding: 5px;
+    margin: 5%;
+    border-width: 0ch 0ch 0.1ch 0ch;
+    transition: border 1s ease;
+}
+
+
+
+.item:focus{
+    outline: none;
+    border-color: rgb(241, 0, 0);
+    
+}
+
+#login_form button{
+    margin: 5% auto;
+    border-width: 0ch;
+    box-shadow: 0px 2px 2px 1px rgb(58, 57, 57);
+    padding: 5px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: bolder;
+    background-color: rgb(0, 130, 251);
+    transition: background-color 500ms ease;
+}
+
+
+#login_form button:hover{
+    background-color: rgb(0, 90, 173);
+
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    font-size: x-small;
+    margin: 10px auto;
+    color: rgb(255, 42, 42);
+    transition: all 500ms ease;
+}
+
+a:hover{
+    transform: scale(1.5);
+}
+
+#err{
+    text-align: center;
+    margin-top: 5%;
+    color: red;
+}

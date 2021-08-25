@@ -1,0 +1,21 @@
+extends header.pug 
+
+block style 
+    style 
+        include ../public/css/log.css
+
+block content
+    .login
+        h1(class = "animate__animated animate__rubberBand") Log In
+        if typeof err != "undefined"
+                p(id = "err") #{err}
+        form(action="/logPost", method="post" id = "login_form") 
+            input(type="email", class = "item" name="email" placeholder = "Email")
+            input(type="password", class = "item" name="password" placeholder = "Password")
+            a(href="http://localhost/sign")
+                p New-user/Sign-up 
+            button(type="submit") Log-In
+
+block script
+    script 
+        include ../public/js/log.js 

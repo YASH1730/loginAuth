@@ -1,0 +1,17 @@
+extends header.pug 
+
+block style 
+        style
+                include ../public/css/home.css
+
+block content
+        h1 Welcome #{Name}
+                p Your are loged in successflly!!
+                p Section will expired in 10 minutes 
+                p(id = "time") 
+                a(href="/logout",id = "logout")
+                        button Log-Out 
+                        
+block script
+    script 
+        include ../public/js/home.js 
